@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <div id="title">
+        <p>Rock</p>
+        <p>Paper</p>
+        <p>Scissors</p>
+    </div>
+    <div id="score">
+      <p>Score</p>
+      <p class="scoreNum">O</p>
+    </div>
+  </header>
+  <main id="main">
+    <!-- Rules -->
+    <div class="rules-container" id="rules">
+        <img src="./images/image-rules.svg" alt="rules">
+        <button id="close"><img src="./images/icon-close.svg" alt="close"></button>
+    </div>
+    <!-- Game -->
+    <div id="game">
+      <div id="select">
+        <div class="pickOut rock">
+          <button id="rock" class="pick" data-choice="rock">
+            <img src="images/icon-rock.svg" alt="rock">
+          </button>
+        </div>
+        <div class="pickOut paper">
+          <button id="paper" class="pick" data-choice="paper">
+            <img src="images/icon-paper.svg" alt="paper">
+          </button>
+        </div>
+        <div class="pickOut scissors">
+          <button id="scissors" class="pick" data-choice="scissors">
+            <img src="/images/icon-scissors.svg" alt="scissors">
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Final Results -->
+    <div class="finalGame" id="finalGame">
+      <div class="grid-item1">
+        <h2>You Picked</h2>
+        <div class="finalPickOut scissors" id='userChoice'>
+          <button id="scissors" class="finalPick">
+            <img src="/images/icon-scissors.svg" alt="scissors">
+          </button>
+        </div>
+      </div>
+      <div class="play grid-item2">
+        <h1>You <span id="result">win</span></h1>
+          <button class="btn" id='reset'>play again</button>
+      </div>
+      <div class="grid-item3">
+        <h2>The House Picked</h2>
+        <div class="finalPickOut scissors" id="computerChoice">
+          <button id="scissors" class="finalPick">
+            <img src="/images/icon-scissors.svg" alt="scissors">
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">DarthEnd / Oleg Andronic</a>.
+    </div>
+    <div class="rules-btn">
+      <button id="open">rules</button>
+    </div>  
+  </footer>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
