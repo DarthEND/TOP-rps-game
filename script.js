@@ -73,6 +73,6 @@ function updateSelection(selectionEl, choice){
   selectionEl.classList.remove('scissors');
 
   selectionEl.classList.add(`${choice}`);
-  selectionEl.querySelector('img').src = `images/icon-rock.svg`;
+  selectionEl.querySelector('img').src = `images/icon-${choice}.svg`;
   selectionEl.querySelector('img').alt = choice;
 };
